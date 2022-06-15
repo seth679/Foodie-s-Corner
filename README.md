@@ -2,7 +2,7 @@
 On-Demand Food Delivery App (**Cross Platform Application**)
 
 
-**Tech Stack**
+**Tech Stack Used:**
 
 Platforms: iOS, Android, Web
 
@@ -14,6 +14,7 @@ Mobile App Development: Flutter
 
 Backend: Firebase
 
+#
 
 Divided into **4 panels**:
 
