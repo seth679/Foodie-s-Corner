@@ -2,7 +2,8 @@
 On-Demand Food Delivery App (Cross Platform Application)
 
 **Tech Stack**
-Platforms: iOS, Android, Web
+
+\nPlatforms: iOS, Android, Web
 Database: FireStore
 Web App Development: Flutter
 Mobile App Development: Flutter
