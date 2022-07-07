@@ -71,7 +71,8 @@ class ShipmentAddressDesign extends StatelessWidget {
           child: Center(
             child: InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
+                Navigator.pop(context);
+                // Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
               },
               child: Container(
                 decoration: const BoxDecoration(

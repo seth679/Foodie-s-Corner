@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         .collection("users")
         .doc(firebaseAuth.currentUser!.uid)
         .get().then((snapshot) {
-      if(snapshot.data()!["status"] == "approved"){
+      if(snapshot.data()!["status"] != "approved"){
         Fluttertoast.showToast(msg: "You have been blocked by Admin.");
 
         firebaseAuth.signOut();
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         title: const Text(
-          "Foodie,s Corner",
+          "Foodie's Corner",
           style: TextStyle(
             fontSize: 45,
             fontFamily: "Signatra",

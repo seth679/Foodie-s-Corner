@@ -56,7 +56,8 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+            Navigator.pop(context);
+            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
           },
         ),
       ),

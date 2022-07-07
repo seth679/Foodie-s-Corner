@@ -145,7 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           }
       );
     });
-    
+
     if(currentUser != null){
       saveDataToFirestore(currentUser!).then((value) {
         Navigator.pop(context);
@@ -155,7 +155,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
       });
     }
-    
   }
 
   Future saveDataToFirestore(User currentUser) async

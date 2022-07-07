@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
           await sharedPreferences!.setString("photoUrl", snapshot.data()!["riderAvatarUrl"]);
 
           Navigator.pop(context);
-          Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
         }
         else{
           firebaseAuth.signOut();
@@ -139,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
             formValidation();
           },
             child: const Text(
-              "Sign Up",
+              "Login",
               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),
             ),
             style: ElevatedButton.styleFrom(

@@ -30,7 +30,7 @@ separateOrderItemIDs(orderIDs) {
 
 separateItemIDs() {
   List<String> separateItemIDsList = [], defaultItemList = [];
-  int i=0;
+  int i=1;
   
   defaultItemList = sharedPreferences!.getStringList("userCart")!;
 
@@ -58,7 +58,7 @@ addItemToCart(String? foodItemId, BuildContext context, int itemCounter){
       .doc(firebaseAuth.currentUser!.uid).update({
     "userCart": tempList
   }).then((value) {
-    Fluttertoast.showToast(msg: "Item AddedSuccessfully");
+    Fluttertoast.showToast(msg: "Item Added Successfully");
 
     sharedPreferences!.setStringList("userCart", tempList);
 
