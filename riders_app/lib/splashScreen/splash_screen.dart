@@ -21,11 +21,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 4), () async {
       // if rider is logged-in already
       if(firebaseAuth.currentUser != null){
-        Navigator.push(context, MaterialPageRoute(builder: (c)=> const HomeScreen()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=> const HomeScreen()));
       }
       // if rider is not logged-in already
       else{
-        Navigator.push(context, MaterialPageRoute(builder: (c)=> const AuthScreen()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=> const AuthScreen()));
       }
 
     });

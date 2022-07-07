@@ -154,7 +154,7 @@ class _ParcelDeliveringScreenState extends State<ParcelDeliveringScreen> {
                   //rider location update
                   UserLocation uLocation = UserLocation();
                   uLocation.getCurrentLocation();
-                  // confirm that rider has picked parcel from seller
+                  // confirm that rider has delivered parcel
                   confirmParcelHasBeenDelivered(
                       widget.getOrderId,
                       widget.sellerId,

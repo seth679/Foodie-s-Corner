@@ -42,7 +42,7 @@ class _MyAppBarState extends State<MyAppBar> {
           },
         ),
         title: const Text(
-          "Foodie,s Corner",
+          "Foodie's Corner",
           style: TextStyle(
             fontSize: 45,
             fontFamily: "Signatra",

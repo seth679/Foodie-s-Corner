@@ -25,7 +25,7 @@ class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: SimpleAppBar(title: "Foodie,s Corner",),
+      appBar: SimpleAppBar(title: "Foodie's Corner",),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             //save address to user collection
@@ -41,7 +41,7 @@ class _AddressScreenState extends State<AddressScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.all(8),

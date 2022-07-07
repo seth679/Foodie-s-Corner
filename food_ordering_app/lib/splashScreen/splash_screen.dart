@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
       }
       // if user is not logged-in already
       else{
-        Navigator.push(context, MaterialPageRoute(builder: (c)=> const AuthScreen()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (c)=> const AuthScreen()));
       }
 
     });

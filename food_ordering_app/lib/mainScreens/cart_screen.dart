@@ -64,7 +64,7 @@ class _CartScreenState extends State<CartScreen> {
           },
         ),
         title: const Text(
-          "Foodie,s Corner",
+          "Foodie's Corner",
           style: TextStyle(
             fontSize: 45,
             fontFamily: "Signatra",

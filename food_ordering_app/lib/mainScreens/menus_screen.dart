@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_ordering_app/assistantMethods/assistant_methods.dart';
+import 'package:food_ordering_app/mainScreens/home_screen.dart';
 // import 'package:food_ordering_app/global/global.dart';
 import 'package:food_ordering_app/models/menus.dart';
 import 'package:food_ordering_app/models/sellers.dart';
 import 'package:food_ordering_app/splashScreen/splash_screen.dart';
 import 'package:food_ordering_app/widgets/menus_design.dart';
+import 'package:food_ordering_app/widgets/my_drawer.dart';
 // import 'package:food_ordering_app/widgets/my_drawer.dart';
 import 'package:food_ordering_app/widgets/progress_bar.dart';
 import 'package:food_ordering_app/widgets/text_widget_header.dart';
@@ -26,7 +28,6 @@ class _MenusScreenState extends State<MenusScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: MyDrawer(),
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -49,13 +50,13 @@ class _MenusScreenState extends State<MenusScreen> {
           onPressed: () {
             clearCartNow(context);
 
-            Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
 
             Fluttertoast.showToast(msg: "Cart has been cleared.");
           },
         ),
         title: const Text(
-          "Foodie,s Corner",
+          "Foodie's Corner",
           style: TextStyle(
             fontSize: 45,
             fontFamily: "Signatra",
