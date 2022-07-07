@@ -51,8 +51,7 @@ class _EarningsScreenState extends State<EarningsScreen> {
 
               GestureDetector(
                 onTap: () {
-                  Navigator.pop(context);
-                  // Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
                 },
                 child: const Card(
                   color: Colors.white54,

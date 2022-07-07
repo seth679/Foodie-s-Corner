@@ -42,18 +42,18 @@ class _HomeScreenState extends State<HomeScreen> {
             )
         )
             : const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.redAccent,
-                Colors.amber,
+      gradient: LinearGradient(
+      colors: [
+          Colors.redAccent,
+          Colors.amber,
 
-             ],
-            begin: FractionalOffset(0.0, 0.0),
-            end: FractionalOffset(1.0, 0.0),
-            stops: [0.0, 1.0],
-            tileMode: TileMode.clamp,
-          )
-        ),
+          ],
+          begin: FractionalOffset(0.0, 0.0),
+      end: FractionalOffset(1.0, 0.0),
+      stops: [0.0, 1.0],
+      tileMode: TileMode.clamp,
+    )
+    ),
         child: InkWell(
           onTap: () {
             if(index == 0){
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
             if(index == 5){
               //Logout
               firebaseAuth.signOut().then((value) {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const AuthScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (c) => const AuthScreen()));
               });
             }
           },
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
         .collection("riders")
         .doc(firebaseAuth.currentUser!.uid)
         .get().then((snapshot) {
-      if(snapshot.data()!["status"] != "approved"){
+      if(snapshot.data()!["status"] == "approved"){
         Fluttertoast.showToast(msg: "You have been blocked by Admin.");
 
         firebaseAuth.signOut();
@@ -140,6 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
 
     restrictBlockedRidersFromUsingApp();
+
 
   }
 

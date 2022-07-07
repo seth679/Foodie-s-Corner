@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/global/global.dart';
 import 'package:food_delivery_app/mainScreens/home_screen.dart';
-import 'package:food_delivery_app/mainScreens/items_screen.dart';
 import 'package:food_delivery_app/models/menus.dart';
 import 'package:food_delivery_app/widgets/error_dialog.dart';
 import 'package:food_delivery_app/widgets/progress_bar.dart';
@@ -62,8 +61,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
-            Navigator.pop(context);
-            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => ItemsScreen(model: widget.model)));
+            Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
           },
         ),
       ),
@@ -117,7 +115,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         context: mContext,
         builder: (context) {
           return SimpleDialog(
-            title: const Text("Item Image",
+            title: const Text("Menu Image",
               style: TextStyle(
                 color: Colors.amber,
                 fontWeight: FontWeight.bold,
@@ -211,7 +209,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white,),
           onPressed: () {
-            clearItemsUploadForm();
+            clearMenusUploadForm();
             // Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
           },
         ),
@@ -369,7 +367,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
     );
   }
 
-  clearItemsUploadForm() {
+  clearMenusUploadForm() {
     setState(() {
       shortInfoController.clear();
       titleController.clear();
@@ -462,7 +460,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         "thumbnailUrl": downloadUrl,
       });
     }).then((value) {
-      clearItemsUploadForm();
+      clearMenusUploadForm();
       setState(() {
         uniqueIdName = DateTime.now().millisecondsSinceEpoch.toString();
         uploading = false;

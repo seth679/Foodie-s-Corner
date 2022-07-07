@@ -36,8 +36,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
               .delete();
 
           Fluttertoast.showToast(msg: "Item Deleted Successfully.");
-          Navigator.pop(context);
-          // Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
+          Navigator.push(context, MaterialPageRoute(builder: (c) => const SplashScreen()));
     });
   }
 

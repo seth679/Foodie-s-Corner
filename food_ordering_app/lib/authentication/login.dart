@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
             formValidation();
           },
             child: const Text(
-              "Login",
+              "Sign Up",
               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),
             ),
             style: ElevatedButton.styleFrom(

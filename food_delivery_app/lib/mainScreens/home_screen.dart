@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         .collection("sellers")
         .doc(firebaseAuth.currentUser!.uid)
         .get().then((snapshot) {
-      if(snapshot.data()!["status"] != "approved"){
+      if(snapshot.data()!["status"] == "approved"){
         Fluttertoast.showToast(msg: "You have been blocked by Admin.");
 
         firebaseAuth.signOut();
