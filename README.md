@@ -28,4 +28,4 @@ Admin Web Portal (Admin Panel)
 
 #
 
-https://docs.google.com/document/d/130Mh4SuKFNgUUtTtgepTgRO2qC4CpHqZe0cpCrojRjQ/edit?usp=sharing
+Documentation: https://docs.google.com/document/d/130Mh4SuKFNgUUtTtgepTgRO2qC4CpHqZe0cpCrojRjQ/edit?usp=sharing
